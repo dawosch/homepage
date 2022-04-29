@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
-const isDevelopment = process.env.NODE_ENV === 'development';
+const isProduction = process.env.NODE_ENV === 'production';
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: isDevelopment ? '/homepage/' : '',
+  assetPrefix: isProduction ? '/homepage/' : '',
 };
 
 module.exports = nextConfig;
